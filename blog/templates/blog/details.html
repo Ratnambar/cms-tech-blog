@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500,600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/35c398e458.js" crossorigin="anonymous"></script>
+
+
+{% block content %}
+            <div id="mainbody1" style="min-height:100vh;overflow:hidden;">
+                <img class="storyimg" src="{{ post.image.url }}"/>
+                    <div class="storydescription" style="min-height:100vh;overflow:hidden;">
+                        <div style="width:100%;"><h3 class="h1heading" style="width:100%;margin-left:50px;">{{ post.title }}</h3><br></div>
+                        <a href=""><span class="blog-author" style="margin-left:30px;color:blue;">{{ post.author }}</span> </a>| {{ post.date }}<br>
+                        <div style="margin-left:50px;margin-right:50px;min-height:100vh;overflow:hidden;"><p class="blog-para" style="font-family: Raleway,sans-serif;">{{ post.content|safe }}</p></div>
+                    </div>
+            </div>
+{% endblock %}
